@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d9acc7968244a8886f3af591305bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeProfile: {fileID: 11400000, guid: 31a611a779d3499e8e35f1a2018ca841, type: 2}
+  activeProfile: {fileID: 11400000, guid: 15c12e8c941a150419951228a44bc83b, type: 2}
 --- !u!4 &1458860173
 Transform:
   m_ObjectHideFlags: 0
@@ -1588,7 +1588,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634720854}
-  - component: {fileID: 1634720855}
   m_Layer: 0
   m_Name: App
   m_TagString: Untagged
@@ -1612,19 +1611,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1634720855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634720853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10bd183765deed34a88b1f37ec84baf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Message: {fileID: 1825245325}
 --- !u!1 &1701956311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +1797,8 @@ GameObject:
   - component: {fileID: 1825245324}
   - component: {fileID: 1825245326}
   - component: {fileID: 1825245325}
+  - component: {fileID: 1825245328}
+  - component: {fileID: 1825245327}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1970,6 +1958,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1825245327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825245323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e88e0f490df0c64ea14dcb13a22a1b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UDPReceiveEventUnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1825245328}
+        m_TargetAssemblyTypeName: ChangeText, Assembly-CSharp
+        m_MethodName: SetASCIIBytes
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  UDPReceivePort: 4602
+--- !u!114 &1825245328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825245323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f751d50de90e9429a164559c4b5215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetTextField: {fileID: 1825245325}
 --- !u!1 &1950049097
 GameObject:
   m_ObjectHideFlags: 0
