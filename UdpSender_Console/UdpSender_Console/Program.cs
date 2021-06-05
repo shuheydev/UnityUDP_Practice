@@ -9,8 +9,8 @@ namespace UdpSender_Console
     {
         static void Main(string[] args)
         {
-            string remoteHost = "10.172.244.102";
-            int remotePort = 10000;
+            string remoteHost = "192.168.11.61";
+            int remotePort = 2002;
 
             UdpClient udpClient = new UdpClient();
 
