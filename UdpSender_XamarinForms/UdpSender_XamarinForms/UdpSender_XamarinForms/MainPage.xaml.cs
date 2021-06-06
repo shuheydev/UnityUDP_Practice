@@ -36,6 +36,17 @@ namespace UdpSender_XamarinForms
             }
         }
 
+        private string _remotePort;
+        public string RemotePort
+        {
+            get => _remotePort;
+            set
+            {
+                _remotePort = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MainPage()
         {
             InitializeComponent();

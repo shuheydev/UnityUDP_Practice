@@ -16,6 +16,8 @@
         <!--  Place new controls here  -->
         <Label Text="Remote IP address:"/>
         <Entry x:Name="Entry_RemoteIPAddress" Keyboard="Numeric" Text="{Binding RemoteIPAddress}"/>
+        <Label Text="Remote Port:"/>
+        <Entry x:Name="Entry_RemotePort" Keyboard="Numeric" Text="{Binding RemotePort}"/>
         <Label
             FontSize="50"
             HorizontalOptions="Center"
