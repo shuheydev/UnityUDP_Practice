@@ -5,10 +5,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:UdpSender_XamarinForms"
     mc:Ignorable="d">
+
+    <d:ContentPage.BindingContext>
+        <local:MainPage/>
+    </d:ContentPage.BindingContext>
 
     <StackLayout>
         <!--  Place new controls here  -->
+        <Label Text="Remote IP address:"/>
+        <Entry x:Name="Entry_RemoteIPAddress" Keyboard="Numeric" Text="{Binding RemoteIPAddress}"/>
         <Label
             FontSize="50"
             HorizontalOptions="Center"

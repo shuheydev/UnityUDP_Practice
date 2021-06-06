@@ -26,6 +26,16 @@ namespace UdpSender_XamarinForms
             }
         }
 
+        private string _remoteIPAddress;
+        public string RemoteIPAddress {
+            get => _remoteIPAddress;
+            set
+            {
+                _remoteIPAddress = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MainPage()
         {
             InitializeComponent();
