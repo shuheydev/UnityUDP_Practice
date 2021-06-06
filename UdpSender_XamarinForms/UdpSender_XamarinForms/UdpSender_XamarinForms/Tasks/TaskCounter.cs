@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using UdpSender_XamarinForms.Messages;
+using UdpSender_XamarinForms.Model;
 
 namespace UdpSender_XamarinForms.Tasks
 {
@@ -13,6 +14,8 @@ namespace UdpSender_XamarinForms.Tasks
     {
         public async Task RunCounter(CancellationToken token)
         {
+            var udpSender = new UDPSender(RemoteHostInformation.IPAddress, RemoteHostInformation.Port);
+
             //GPSの精度をHighに
             //2つめの引数で取得間隔を設定できる。timeoutってなってるけど。
             var request = new GeolocationRequest(GeolocationAccuracy.High, TimeSpan.FromSeconds(1));
@@ -29,7 +32,7 @@ namespace UdpSender_XamarinForms.Tasks
 
                     var message = new TickedMessage
                     {
-                        Message = $"Count : {i.ToString()}, Lat = {location.Latitude}, Lon = {location.Longitude}"
+                        Message = $"Count : {i.ToString()}, Lat = {location.Latitude}, Lon = {location.Longitude}, Alt={location.Altitude}"
                     };
                     //ここまで
 
@@ -37,6 +40,8 @@ namespace UdpSender_XamarinForms.Tasks
                     {
                         MessagingCenter.Send<TickedMessage>(message, nameof(TickedMessage));
                     });
+
+                    udpSender.Send(message.Message);
                 }
             }, token);
         }

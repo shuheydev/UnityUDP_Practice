@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using UdpSender_XamarinForms.Messages;
+using UdpSender_XamarinForms.Model;
 
 namespace UdpSender_XamarinForms
 {
@@ -27,7 +28,8 @@ namespace UdpSender_XamarinForms
         }
 
         private string _remoteIPAddress;
-        public string RemoteIPAddress {
+        public string RemoteIPAddress
+        {
             get => _remoteIPAddress;
             set
             {
@@ -53,6 +55,9 @@ namespace UdpSender_XamarinForms
 
             this.BindingContext = this;
 
+            RemoteIPAddress = "192.168.121.25";
+            RemotePort = "4602";
+
             MessagingCenter.Subscribe<TickedMessage>(this, nameof(TickedMessage), message =>
             {
                 Message = message.Message;
@@ -71,6 +76,9 @@ namespace UdpSender_XamarinForms
                 if (status != PermissionStatus.Granted)
                     return;
             }
+
+            RemoteHostInformation.IPAddress = RemoteIPAddress;
+            RemoteHostInformation.Port = int.Parse(RemotePort);
 
             var message = new StartLongRunningTaskMessage();
             MessagingCenter.Send(message, nameof(StartLongRunningTaskMessage));
