@@ -26,9 +26,16 @@ public class ChangeText : MonoBehaviour
     [SerializeField]
     private MapPinLayer MapPinLayer;
 
+    private GameObject currentLocationPin;
+    private MapPin currentPin;
     private void Awake()
     {
-        //mapRenderer = GetComponent<MapRenderer>();
+        ////mapRenderer = GetComponent<MapRenderer>();
+        //currentPin = new MapPin();
+        //currentPin.Location = mapRenderer.Center;
+        
+        //this.MapPinLayer.ClusterMapPinPrefab
+        //MapPinLayer.MapPins.Add(currentPin);
     }
 
     public void SetASCIIBytes(byte[] bytes)
