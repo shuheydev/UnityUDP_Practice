@@ -19,6 +19,13 @@ public class ChangeText : MonoBehaviour
     [SerializeField]
     private MapRenderer mapRenderer;
 
+
+    [SerializeField]
+    private GameObject MapPinPrefab;
+
+    [SerializeField]
+    private MapPinLayer MapPinLayer;
+
     private void Awake()
     {
         //mapRenderer = GetComponent<MapRenderer>();
@@ -64,7 +71,7 @@ public class ChangeText : MonoBehaviour
         yield return mapRenderer.WaitForLoad();
     }
 
-
+    #region テスト用
     [SerializeField]
     private MapRenderer _map = null;
 
@@ -123,6 +130,9 @@ public class ChangeText : MonoBehaviour
         yield return mapRenderer.SetMapScene(mapScene);
         yield return mapRenderer.WaitForLoad();
     }
+    #endregion
+
+
     // Start is called before the first frame update
     void Start()
     {

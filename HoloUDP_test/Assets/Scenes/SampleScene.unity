@@ -6765,6 +6765,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetTextField: {fileID: 1825245325}
   mapRenderer: {fileID: 2062783452}
+  MapPinPrefab: {fileID: 0}
+  MapPinLayer: {fileID: 0}
   _map: {fileID: 2062783452}
 --- !u!1 &1840797164
 GameObject:
@@ -7146,6 +7148,8 @@ GameObject:
   - component: {fileID: 2062783455}
   - component: {fileID: 2062783454}
   - component: {fileID: 2062783456}
+  - component: {fileID: 2062783458}
+  - component: {fileID: 2062783457}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -7321,15 +7325,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateLinkedTransform: 0
-  moveLerpTime: 0.5
-  rotateLerpTime: 0.5
+  moveLerpTime: 0
+  rotateLerpTime: 0
   scaleLerpTime: 0
   maintainScaleOnInitialization: 1
   smoothing: 1
   lifetime: 0
   referenceDirection: 2
-  minDistance: 0.5
-  maxDistance: 1
+  minDistance: 1
+  maxDistance: 2
   minViewDegrees: 0
   maxViewDegrees: 25
   aspectV: 1
@@ -7393,6 +7397,50 @@ MonoBehaviour:
   onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2062783457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062783445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b303ffbed90191b4dbbf76b03bf83d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSpeed: 3.5
+  _panSpeed: 0.5
+  _onTapAndHold:
+    m_PersistentCalls:
+      m_Calls: []
+  _onDoubleTap:
+    m_PersistentCalls:
+      m_Calls: []
+  _onInteractionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  _onInteractionEnded:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2062783458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062783445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8a6459eb3010b4f9751de03dca135a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layerName: MapPinLayerTest
+  _mapPins:
+    _list: []
+  _isClusteringEnabled: 1
+  _clusterThreshold: 5
+  _clusterMapPinPrefab: {fileID: 0}
 --- !u!1 &2095197285
 GameObject:
   m_ObjectHideFlags: 0
