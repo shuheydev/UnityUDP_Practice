@@ -7,6 +7,10 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using UdpSender_XamarinForms.Messages;
 using UdpSender_XamarinForms.Model;
+using DataModelFromPhone;
+using System.Text.Json;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 
 namespace UdpSender_XamarinForms.Tasks
 {
@@ -30,9 +34,25 @@ namespace UdpSender_XamarinForms.Tasks
                     //ここから
                     var location = await Geolocation.GetLocationAsync(request);
 
+                    var locationInfo = new GeolocationInfo
+                    {
+                        Latitude = location.Latitude,
+                        Longitude = location.Longitude,
+                        Altitude = location.Altitude
+                    };
+
+                    var serializeOption = new JsonSerializerOptions
+                    {
+                        Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
+                        WriteIndented = true,
+                    };
+
+                    string locationInfoJson = JsonSerializer.Serialize(locationInfo, serializeOption);
+
                     var message = new TickedMessage
                     {
-                        Message = $"Count : {i.ToString()}, Lat = {location.Latitude}, Lon = {location.Longitude}, Alt={location.Altitude}"
+                        //Message = $"Count : {i.ToString()}, Lat = {location.Latitude}, Lon = {location.Longitude}, Alt={location.Altitude}"
+                        Message = locationInfoJson
                     };
                     //ここまで
 

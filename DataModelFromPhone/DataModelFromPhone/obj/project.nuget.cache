@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7myDmq2Cx617/ztfFXu9eCzw2bVZcO2HOJp75junEqRStCC2TCNKDG+vWi0P4rXiZfvd1YBkDTzAzdfSeyQREw==",
+  "success": true,
+  "projectFilePath": "C:\\repos\\Hololens_study\\Holo_GPS_Map_UDP\\DataModelFromPhone\\DataModelFromPhone\\DataModelFromPhone.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shuhei.nishizawa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\shuhei.nishizawa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,9 @@
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\bin\Release\netstandard2.0\DataModelFromPhone.deps.json
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\bin\Release\netstandard2.0\DataModelFromPhone.dll
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\bin\Release\netstandard2.0\DataModelFromPhone.pdb
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\obj\Release\netstandard2.0\DataModelFromPhone.AssemblyInfoInputs.cache
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\obj\Release\netstandard2.0\DataModelFromPhone.AssemblyInfo.cs
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\obj\Release\netstandard2.0\DataModelFromPhone.csproj.CoreCompileInputs.cache
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\obj\Release\netstandard2.0\DataModelFromPhone.dll
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\obj\Release\netstandard2.0\DataModelFromPhone.pdb
+C:\repos\Hololens_study\Holo_GPS_Map_UDP\DataModelFromPhone\DataModelFromPhone\obj\Release\netstandard2.0\DataModelFromPhone.csproj.AssemblyReference.cache

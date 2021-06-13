@@ -1497,8 +1497,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371051540}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.129, z: -0.592}
+  m_LocalRotation: {x: 0.49118328, y: 0.48557347, z: -0.5084047, w: 0.51427823}
+  m_LocalPosition: {x: 0.582, y: 0.372, z: -0.251}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1840797165}
@@ -1506,7 +1506,7 @@ Transform:
   - {fileID: 1070487773}
   m_Father: {fileID: 2062783446}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 87.368, y: 0, z: -89.342}
 --- !u!114 &371051542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,8 +1545,8 @@ MonoBehaviour:
   tickMarks: {fileID: 1070487772}
   thumbVisuals: {fileID: 1098868454}
   sliderAxis: 0
-  sliderStartDistance: -0.125
-  sliderEndDistance: 0.125
+  sliderStartDistance: -0.12500905
+  sliderEndDistance: 0.12501137
   OnValueUpdated:
     m_PersistentCalls:
       m_Calls:
@@ -6367,6 +6367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634720854}
+  - component: {fileID: 1634720855}
   m_Layer: 0
   m_Name: App
   m_TagString: Untagged
@@ -6389,6 +6390,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1634720855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634720853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e88e0f490df0c64ea14dcb13a22a1b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UDPReceiveEventUnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1825245328}
+        m_TargetAssemblyTypeName: ChangeText, Assembly-CSharp
+        m_MethodName: SetASCIIBytes
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  UDPReceivePort: 4602
 --- !u!1 &1650289320
 GameObject:
   m_ObjectHideFlags: 0
@@ -6563,7 +6592,6 @@ GameObject:
   - component: {fileID: 1825245326}
   - component: {fileID: 1825245325}
   - component: {fileID: 1825245328}
-  - component: {fileID: 1825245327}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -6637,8 +6665,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.125
-  m_fontSizeBase: 0.125
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6723,34 +6751,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1825245327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825245323}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e88e0f490df0c64ea14dcb13a22a1b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UDPReceiveEventUnityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1825245328}
-        m_TargetAssemblyTypeName: ChangeText, Assembly-CSharp
-        m_MethodName: SetASCIIBytes
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  UDPReceivePort: 4602
 --- !u!114 &1825245328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6764,6 +6764,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetTextField: {fileID: 1825245325}
+  mapRenderer: {fileID: 2062783452}
+  _map: {fileID: 2062783452}
 --- !u!1 &1840797164
 GameObject:
   m_ObjectHideFlags: 0
@@ -7084,7 +7086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914804091}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0.447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 288535293}
@@ -7260,7 +7262,7 @@ MonoBehaviour:
   _requestTilesAroundView: 1
   _center:
     _latitude: 35.7883769
-    _longitude: 139.6128016
+    _longitude: 139.7
   _zoomLevel: 16.23
   _minimumZoomLevel: 1
   _maximumZoomLevel: 20
@@ -7334,7 +7336,7 @@ MonoBehaviour:
   ignoreAngleClamp: 0
   ignoreDistanceClamp: 0
   useFixedVerticalPosition: 1
-  fixedVerticalPosition: -0.4
+  fixedVerticalPosition: -0.8
   orientToReferenceDirection: 0
 --- !u!114 &2062783455
 MonoBehaviour:
